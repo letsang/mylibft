@@ -6,7 +6,7 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:26:34 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/05 17:56:38 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/21 13:30:48 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 		p[i++] = (char)c;
-	b = (void *)b;
 	return (b);
 }

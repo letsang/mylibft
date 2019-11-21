@@ -6,7 +6,7 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:10:31 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/12 16:55:09 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/21 13:36:47 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,17 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
+	lead = 0;
+	while (s1[lead] && ft_ischarset(set, s1[lead]))
+		lead++;
+	trail = ft_strlen(s1);
+	while (trail > lead && ft_ischarset(set, s1[trail - 1]))
+		trail--;
+	len = trail - lead;
+	if (len == 0)
+		return (ft_strnew(0));
 	else
-	{
-		lead = 0;
-		while (s1[lead] && ft_ischarset(set, s1[lead]))
-			lead++;
-		trail = ft_strlen(s1);
-		while (trail > lead && ft_ischarset(set, s1[trail - 1]))
-			trail--;
-		len = trail - lead;
-		if (len == 0)
-			return (ft_strnew(0));
-		else
-			return (ft_substr(s1, (unsigned int)lead, len));
-	}
+		return (ft_substr(s1, (unsigned int)lead, len));
 }
