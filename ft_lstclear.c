@@ -6,13 +6,13 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 09:04:19 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/21 09:10:23 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/22 05:50:13 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *link;
 	t_list *tmp;

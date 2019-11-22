@@ -6,13 +6,13 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 08:58:57 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/21 08:59:05 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/22 05:50:44 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	if (!(*alst) && !new)
 		return ;

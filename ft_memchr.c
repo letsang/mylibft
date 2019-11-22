@@ -6,7 +6,7 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:26:15 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/07 11:30:19 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/22 05:43:14 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	const unsigned char	*ps;
 
 	ps = (const unsigned char *)s;
