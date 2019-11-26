@@ -6,7 +6,7 @@
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 18:28:58 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/21 09:31:18 by jtsang           ###   ########.fr       */
+/*   Updated: 2019/11/26 10:53:36 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,17 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
+int					ft_ischarset(char const *set, char c);
+int					ft_isspace(int c);
+void				ft_putchar(int c);
+void				ft_putnbr(int n);
+void				ft_putstr(const char *s);
+char				*ft_strcat(char *dst, char const *src);
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strcpy(char *dest, const char *src);
+char				*ft_strmap(const char *s, char (*f)(char));
+char				*ft_strncat(char *s1, const char *s2, size_t n);
+char				*ft_strncpy(char *dst, const char *src, size_t len);
+char				*ft_strnew(size_t size);
 
 #		endif

@@ -12,6 +12,8 @@ OBJS	= ${SRC:.c=.o}
 
 BONUS	= ${SRC:.c=.o} ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o \
 	ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o \
+	ft_ischarset.o ft_isspace.o ft_putchar.o ft_putnbr.o ft_putstr.o ft_strcat.o \
+	ft_strcmp.o ft_strcpy.o ft_strmap.o ft_strncat.o ft_strncpy.o ft_strnew.o \
 
 NAME	= libft.a
 

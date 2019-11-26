@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   strcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 12:27:27 by jtsang            #+#    #+#             */
-/*   Updated: 2019/11/26 10:55:28 by jtsang           ###   ########.fr       */
+/*   Created: 2019/09/02 21:53:35 by jtsang            #+#    #+#             */
+/*   Updated: 2019/11/11 12:18:54 by jtsang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	char	*join;
+	int				i;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
 
-	if (!s1 && !s2)
-		return (NULL);
-	if (!(join = (char *)malloc((sizeof(char)) *
-				(ft_strlen(s1) + ft_strlen(s2) + 1))))
-		return (NULL);
-	join = ft_strcpy(join, s1);
-	join = ft_strcat(join, s2);
-	return (join);
+	i = 0;
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
+	while (ps1[i] != '\0' && ps2[i] != '\0')
+	{
+		if (ps1[i] != ps2[i])
+			return (ps1[i] - ps2[i]);
+		i++;
+	}
+	if ((ps1[i] == '\0' && ps2[i] != '\0')
+			|| (ps1[i] != '\0' && ps2[i] == '\0'))
+		return (ps1[i] - ps2[i]);
+	return (0);
 }
